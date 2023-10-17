@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    meta(name='viewport',content='width=device-width,initial-scale=1.0')
+    title= title
+    link(rel='stylesheet', href='/bootstrap/css/vapor.bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    center
+      h1 Weather Forcast
+    nav.navbar.navbar-expand-lg.bg-light(data-bs-theme='light').navbar-fixed-top
+      .container-fluid
+        a.navbar-brand(href='/') Weather Forcast
+        button.navbar-toggler.collapsed(type='button',data-bs-toggle='collapse',data-bs-target='#navbarColor03',aria-controls='navbarColor03',aria-expanded='false',aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarColor03.navbar-collapse.collapse
+          ul.navbar-nav
+            li.nav-item
+              a.nav-link.active(href='/')
+                big | Home
+                span.visually-hidden (current)
+            li.nav-item
+              a.nav-link(href='/about/') 
+                big About
+            li.nav-item
+              a.nav-link(href='/sign') 
+                big SignIN
+   .container
+    block content
+    footer 
+      .row 
+        .col-sm-12 
+          small &copy; Muskaan Marwa 2023
+    script(src='/javascripts/jquery-1.11.1.min.js')
+    script(src='/bootstrap/js/bootstrap.min.js')

@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  #banner.page-header 
+    .row 
+      .col-lg-12 
+        br 
+        br
+        center
+          h4=title  
+            br
+            br
+  .row
+    .col-xs-12.col-ms-8 
+      .row.list-group 
+        .col-xs-12.list-group-item
+          .d-grid.gap-2
+            each category in categories
+              a(href=category.href).button.btn.btn-lg.btn-primary(type='button',fdprocessedid='1w9c1')=category.name
+      br
+      br
+  .row
+    .col-xs-12

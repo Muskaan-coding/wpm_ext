@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  br
+  br
+  center
+    h1= title
+  br
+  br
+  .row 
+    each content in contents
+      .col-md-12.col-sm-6 
+        .card.border-secondary.text-white.bg-secondary.mb-3
+            .card-body 
+              h2 
+                &nbsp;#{content.Date}
+              .container
+                .row
+                  .col.s12.m3
+                    .card-image
+                      img.responsive-img(src=content.imghref,width="100%",height="350" )
